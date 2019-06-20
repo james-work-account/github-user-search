@@ -37,7 +37,6 @@ export default {
   },
   mounted() {
     const bearer = localStorage.getItem("bearerToken");
-    console.log(bearer);
     if (localStorage.getItem("bearerToken")) {
       store.dispatch("setBearerToken", bearer);
     }
