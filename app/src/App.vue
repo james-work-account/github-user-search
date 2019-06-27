@@ -1,29 +1,20 @@
 <template>
   <div id="app">
     <Banner></Banner>
-    <router-view v-if="get_bearer_token.length !== 0"/>
-    <div v-else class="bearer-input">
-      <form @submit.prevent="setBearer" id="bearer-input-form">
-        <input
-          type="text"
-          name="bearer-input"
-          id="bearer-input"
-          placeholder="Enter a Bearer Token..."
-          :value="'Bearer '"
-        >
-        <button type="submit">Submit</button>
-      </form>
-    </div>
+    <BearerModal v-if="!get_bearer_token"/>
+    <router-view/>
   </div>
 </template>
 
 <script>
 import Banner from "@/components/Banner.vue";
+import BearerModal from "@/components/BearerModal.vue";
 import { mapGetters } from "vuex";
 import store from "@/store";
 export default {
   components: {
-    Banner
+    Banner,
+    BearerModal
   },
   methods: {
     setBearer(e) {
@@ -75,29 +66,5 @@ a:visited {
 }
 #nav a.router-link-exact-active {
   color: #42b983;
-}
-.bearer-input {
-  padding: 0 15px 50px 15px;
-}
-@media (min-width: 1000px) {
-  .bearer-input {
-    max-width: 1000px;
-    margin: auto;
-  }
-}
-form#bearer-input-form {
-  display: grid;
-  grid-template-columns: 3fr 1fr;
-  grid-column-gap: 0.5em;
-  margin-top: 1em;
-}
-form#bearer-input-form button {
-  background-color: #fff;
-  border: 1px solid black;
-  font-size: 1.2em;
-}
-input#bearer-input {
-  padding: 1em;
-  font-size: 1.2em;
 }
 </style>

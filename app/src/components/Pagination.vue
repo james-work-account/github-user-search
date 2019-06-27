@@ -83,19 +83,23 @@ export default {
 }
 .list-inline > li {
   list-style: none;
-  padding: 10px 20px 10px 20px;
   border: 2px solid #ddd;
 }
-.list-inline > li:hover {
+.list-inline > li > button:hover {
   background: #ddd;
 }
 .list-inline > li > button {
-  padding: 0;
+  padding: 10px 20px 10px 20px;
   border: none;
   color: var(--link-colour);
 }
 .list-inline > li.current {
   background: #ddd;
+  padding: 10px 20px 10px 20px;
+}
+.list-inline > li > button,
+.list-inline > li.current {
+  cursor: pointer;
 }
 @media (max-width: 599px) {
   .list-inline {
