@@ -2,6 +2,10 @@
 
 Dockerised website with a GraphQL backend and Vue frontend.
 
+_Note: Can now be run from Docker Hub without needing to clone the repo:_
+
+_`docker run -p 4000:4000 jamesworkaccount/github-user-search:latest`_
+
 ## Running
 
 You will need a GitHub Personal Access Token to access this app. Read about them [here](https://help.github.com/en/articles/creating-a-personal-access-token-for-the-command-line).
