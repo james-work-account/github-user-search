@@ -100,6 +100,7 @@ export default {
 .list-inline > li > button,
 .list-inline > li.current {
   cursor: pointer;
+  width: 100%;
 }
 @media (max-width: 599px) {
   .list-inline {
