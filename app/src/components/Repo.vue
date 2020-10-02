@@ -29,4 +29,9 @@ export default {
   padding-bottom: 1.5em;
   border-bottom: 1px solid #ccc;
 }
+
+.repo-info h3, .repo-info p {
+  max-width: 500px;
+  word-break: break-all;
+}
 </style>

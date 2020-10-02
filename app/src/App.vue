@@ -67,4 +67,7 @@ a:visited {
 #nav a.router-link-exact-active {
   color: #42b983;
 }
+button {
+  cursor: pointer;
+}
 </style>

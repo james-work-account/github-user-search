@@ -110,6 +110,7 @@ export default {
 .user-detail .details {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  grid-gap: 25px;
 }
 .user-detail h1 {
   border-bottom: 3px solid #000;
@@ -120,9 +121,6 @@ export default {
   width: var(--size);
   height: var(--size);
   justify-self: center;
-}
-.user-info {
-  padding-left: 50px;
 }
 .user-info > * {
   text-align: left;
